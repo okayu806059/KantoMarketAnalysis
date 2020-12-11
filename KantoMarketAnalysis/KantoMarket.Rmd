@@ -1,0 +1,21 @@
+```{r}
+Rawdata <- read.csv("/Users/yuuki/Desktop/KantoMarketSurvey2.csv")
+Rawdata <- na.omit(Rawdata)
+
+tmp <- Rawdata[Rawdata$q2c2 == 1 || Rawdata$q2c3 == 1 || Rawdata$q2c4 == 1 || Rawdata$q2c5 == 1 || Rawdata$q2c7 == 1 || Rawdata$q2c8 == 1 || Rawdata$q2c9 ==1|| Rawdata$q2c10 == 1]
+
+tmp2 <- tmp[tmp$q3 ==4 || tmp$q3 == 5]
+
+tmp3 <- tmp2[tmp2$q4 == 5 || tmp2$q4 == 6]
+
+yuru <- Rawdata[(Rawdata$q2c2 == 1 || Rawdata$q2c3 == 1 || Rawdata$q2c4 == 1 || Rawdata$q2c5 == 1 || Rawdata$q2c7 == 1 || Rawdata$q2c8 == 1 || Rawdata$q2c9 ==1|| Rawdata$q2c10 == 1) && (Rawdata$q3==4 || Rawdata$q3==5) && (Rawdata$q4==5 || Rawdata$q4==6)]
+summary(yuru)
+
+```
+
+```{python}
+
+```
+
+
+
